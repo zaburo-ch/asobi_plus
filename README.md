@@ -1,6 +1,8 @@
 ASOBI+
 ====
-昔ながらのあそびに最新の技術をプラスして最高に楽しくするWebアプリです。WebRTCを用いてブラウザ上でP2P通信を実現します。実際に動いているものは[こちら](http://asobi.herokuapp.com/)  
+昔ながらのあそびに最新の技術をプラスして最高に楽しくするWebアプリです。 
+WebRTCを用いてブラウザ上でP2P通信を実現します。  
+実際に動いているものは[こちら](http://asobi.herokuapp.com/)  
 
 ここに置いてあるコードについて
 ----
@@ -15,3 +17,10 @@ License
 ----
 Open sourced under the [MIT license](LICENSE.md).
 
+Author
+----
+Kaizaburo Chubachi
+
+Contact
+----
+[My Blog](https://zaburo-ch.github.io/)
