@@ -13,14 +13,20 @@ key:'your key',
 ```
 としています。  
 
-License
+ライセンス
 ----
-Open sourced under the [MIT license](LICENSE.md).
+[MIT license](LICENSE.md).
+このソースコードには下記のライセンスを含みます。
+jQuery | Copyright (c) 2005, 2014 jQuery Foundation, Inc.  ([MIT](https://github.com/jquery/jquery/blob/master/LICENSE.txt))
+jQuery Mobile | Copyright (c) 2010, 2014 jQuery Foundation, Inc. ([MIT](https://github.com/jquery/jquery-mobile/blob/master/LICENSE.txt))
+PeerJS | Copyright (c) 2015 Michelle Bu and Eric Zhang ([MIT](https://github.com/peers/peerjs/blob/master/LICENSE))
+jquery-qrcode | Copyright (c) 2011 Jerome Etienne ([MIT](https://github.com/jeromeetienne/jquery-qrcode/blob/master/MIT-LICENSE.txt))
 
-Author
+作者
 ----
 Kaizaburo Chubachi
 
-Contact
+連絡先
 ----
-[My Blog](https://zaburo-ch.github.io/)
+[Email](https://github.com/tanksuzuki)  
+[ブログ](https://zaburo-ch.github.io/)  
