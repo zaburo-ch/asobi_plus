@@ -42,5 +42,5 @@ Kaizaburo Chubachi
 
 連絡先
 ----
-[Email](https://github.com/tanksuzuki)  
+[Email](https://github.com/zaburo-ch)  
 [ブログ](https://zaburo-ch.github.io/)  
