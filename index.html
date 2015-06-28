@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ASOBI+</title>
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <link rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css" />
+  <link rel="stylesheet" href="css/keipl.min.css" />
+  <link rel="stylesheet" href="css/keipl.css" />
+  <script src="jquery/jquery-1.11.1.min.js"></script>
+  <script src="jquery/jquery.mobile-1.4.2.min.js"></script>
+  <script type="text/javascript">
+  var username = "";
+  var roomname = "";
+  var color = 0;
+  $(function(){
+    var url = document.location.href;
+    if(url.match(/username=([^&]+)/)){
+      try{
+        username = decodeURI(RegExp.$1);
+      }catch(e){
+        username="";
+      }
+      $("#username").val(username);
+    }
+    if(url.match(/roomname=([^&]+)/)){
+      try{
+        roomname = decodeURI(RegExp.$1);
+      }catch(e){
+        roomname = "";
+      }
+      $("#roomname").val(roomname);
+    }
+    if(url.match(/color=([^&]+)/)){
+      color = parseInt(RegExp.$1);
+      $("#color").val(color);
+    }
+    $('a[href^=#how]').click(function() {
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, 400, 'swing');
+      return false;
+    });
+  });
+  $(document).ready(function(){
+    var RSD = window.RTCSessionDescription || window.mozRTCSessionDescription;
+    var RPC = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+    var RIC = window.RTCIceCandidate || window.mozRTCIceCandidate;
+    if((!RSD)||(!RPC)||(!RIC)){
+      setTimeout(function(){$("#alert_popup").popup('open');},2000);
+    }
+  });
+  function onClick(){
+    username = $("#username").val();
+    if(username==""){
+      alert("名前が入力されていません");
+      return;
+    }
+    roomname = $("#roomname").val();
+    if(roomname==""){
+      alert("部屋名が入力されていません");
+      return;
+    }
+    color = $("#color").val();
+    var url = "room.html?username="+username+"&roomname="+roomname+"&color="+color;
+    location.href = url;
+  }
+  </script>
+</head>
+<body>
+
+  <div data-role="page" id="page1" data-theme="a" >
+    <div id="alert_popup" style="text-align:center;" data-role="popup" data-position-to="window">
+      <div class="alert_message">このブラウザでは正常に動作しない可能性があります。Google Chrome,Mozilla Firefox,Operaのいずれかの最新版でお試しください。</div>
+    </div>
+    <div data-role="header">
+      <h1>ASOBI+</h1>
+    </div>
+    <div data-role="content">
+      <div class="qrandbutton">
+        <img src="logo1.png" />
+        <img src="logo2.png" />
+      </div>
+      <div class="howlink">
+        <a href="#how" style="color:#0052b3">ASOBI+とは？</a>
+      </div>
+      <label for="username">名前:</label>
+      <input type="text" name="name" id="username" value="" />
+      <label for="roomname">部屋名:</label>
+      <input type="text" name="name" id="roomname" value="" />
+      <label for="color">カラー:</label>
+      <select id="color" name="color" data-theme="b" data-theme="b" data-native-menu="false">
+        <option value="0">赤</option>
+        <option value="1">青</option>
+        <option value="2">黄</option>
+        <option value="3">緑</option>
+        <option value="4">黒</option>
+      </select>
+      <div class="padding20">
+        <button type="button" id="okbtn" onclick="onClick();">入室</button>
+      </div>
+      <div id="how">
+        <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all howcard">
+          <h3>あそびを最高に楽しく！</h3>
+          <p>昔ながらのあそびに最新の技術をプラスして最高に楽しくするWebアプリです。友達を誘って同じ部屋名で入室してみましょう。</p>
+        </div>
+        <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all howcard">
+          <h3>音声と位置情報を共有</h3>
+          <p>チーム内で音声通話をし連絡を取り合う事ができます(同じ色の参加者が同じチームとなります)。参加者の位置情報は地図上に表示されリアルタイムで更新されます。また共有する相手を細かく指定することもできます。</p>
+        </div>
+        <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all howcard">
+          <h3>様々なゲームモード</h3>
+          <p>他の参加者の位置情報を隠し、一定距離以内に入ると端末が振動してその存在を知らせる「かくれんぼモード」をはじめ、「鬼ごっこモード」「ケイドロモード」など様々なモードを用意しています。</p>
+        </div>
+        <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all howcard">
+          <h3>無限の可能性</h3>
+          <p>ゲームモードはおまけに過ぎません。あそび方は使う人次第で無限に広がります。子供も大人も自分たちのルールをつくって楽しく遊びましょう！</p>
+        </div>
+        <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all howcard">
+          <h3>対応ブラウザについて</h3>
+          <p>Google Chrome,Mozilla Firefox,Operaのいずれかの最新版でお試しください。ブラウザをアップデートすることで正常に動作するようになることがあります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

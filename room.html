@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ASOBI+</title>
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <link rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css" />
+  <link rel="stylesheet" href="css/keipl.min.css" />
+  <link rel="stylesheet" href="css/keipl.css" />
+  <script src="jquery/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+  <script src="jquery/jquery.mobile-1.4.2.min.js"></script>
+  <script src="https://skyway.io/dist/0.3/peer.js"></script>
+</head>
+<body>
+  <div data-role="page" id="map" data-theme="a" >
+    <div id="alert_popup_onmap" style="text-align:center;" data-role="popup" data-position-to="window">
+      <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+      <div id="alert_message_onmap" class="alert_message">てすと！</div>
+    </div>
+    <div id="confirm_popup_onmap" style="text-align:center;" data-role="popup" data-position-to="window">
+      <div id="confirm_message_onmap" class="alert_message">てすと！</div>
+      <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="b">Cancel</a>
+      <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="a" onclick="confirmOK();">OK</a>
+    </div>
+    <div data-role="header">
+      <h1>地図</h1>
+    </div>
+    <div data-role="content">
+      <div  id="wrap_map" class="wrap_map">
+        <div id="mMap" class="ui-shadow"></div>
+        <div id="open_control" class="open_control"></div>
+        <div id="close_control" class="close_control"></div>
+      </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="toolbar">
+      <div data-role="navbar">
+        <ul>
+          <li><a class="ui-btn-active" href="#map">地図</a></li>
+          <li><a href="#member">メンバー</a></li>
+          <li><a href="#mode">モード</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="page" id="member" data-theme="a" >
+    <div id="qrpopup" style="text-align:center;" data-role="popup" data-position-to="window">
+      <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+      <div class="qr_text">この部屋のQRコードです</div>
+      <div id="qrcode" class="padding20"></div>
+    </div>
+    <div id="card_popup" style="text-align:center;" data-role="popup" data-position-to="window">
+      <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+      <div style="height:65px">
+        <img id="card_control_pos" src="pos_on.png" class="padding10 card_control_img" style="float:left"/>
+        <div class="card_control_border"></div>
+        <img id="card_control_vo" src="voice_on.png" class="padding10 card_control_img" style="float:left"/>
+      </div>
+    </div>
+    <div id="alert_popup_onmember" style="text-align:center;" data-role="popup" data-position-to="window">
+      <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+      <div id="alert_message_onmember" class="alert_message">てすと！</div>
+    </div>
+    <div id="confirm_popup_onmember" style="text-align:center;" data-role="popup" data-position-to="window">
+      <div id="confirm_message_onmember" class="alert_message">てすと！</div>
+      <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="b">Cancel</a>
+      <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="a" onclick="confirmOK();">OK</a>
+    </div>
+    <div data-role="header">
+      <h1>メンバー</h1>
+    </div>
+    <div data-role="content">
+      <a style="text-decoration:none;" href="#qrpopup" data-rel="popup"><div id="invite" class="card_shadow bg_white padding10">
+        <div class="invite_text">この部屋に招待する</div>
+        <img class="invite_img" src="open_control.png" />
+      </div></a>
+      <div id="wrap_members">
+      </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="toolbar">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#map">地図</a></li>
+          <li><a class="ui-btn-active" href="#member">メンバー</a></li>
+          <li><a href="#mode">モード</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="page" id="mode" data-theme="a" >
+    <div id="alert_popup_onmode" style="text-align:center;" data-role="popup" data-position-to="window">
+      <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+      <div id="alert_message_onmode" class="alert_message">てすと！</div>
+    </div>
+    <div id="confirm_popup_onmode" style="text-align:center;" data-role="popup" data-position-to="window">
+      <div id="confirm_message_onmode" class="alert_message">てすと！</div>
+      <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="b">Cancel</a>
+      <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="a" onclick="confirmOK();">OK</a>
+    </div>
+    <div data-role="header">
+      <h1>モード</h1>
+    </div>
+    <div data-role="content">
+      <div data-role="collapsible" data-collapsed="false">
+        <h3>鬼ごっこ</h3>
+        <p>地図のコントロールに鬼ボタンが出現します。ボタンを押した人の位置は他の参加者に見えなくなります。鬼にタッチされた人がボタンを押す事で鬼が移り変わります</p>
+        <a href="#" id="mode_btn1" data-role="button" data-theme="a" onclick="selectMode(1);">このモードにする</a>
+      </div>
+      <div data-role="collapsible" data-collapsed="false">
+        <h3>かくれんぼ</h3>
+        <p>参加者全員の位置が見えなくなります。自分の周囲50メートル以内に他の参加者が入ると端末がバイブで知らせてくれます(対応端末のみ)。</p>
+        <a href="#" id="mode_btn2" data-role="button" data-theme="a" onclick="selectMode(2);">このモードにする</a>
+      </div>
+      <div data-role="collapsible" data-collapsed="false">
+        <h3>ケイドロ/ドロケイ</h3>
+        <p>違う色の参加者の位置が見えなくなります。自分の周囲100メートル以内に違う色の参加者が入るとその位置が見えるようになります。またその際端末がバイブで知らせてくれます(対応端末のみ)。</p>
+        <a href="#" id="mode_btn3" data-role="button" data-theme="a" onclick="selectMode(3);">このモードにする</a>
+      </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="toolbar">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#map">地図</a></li>
+          <li><a href="#member">メンバー</a></li>
+          <li><a class="ui-btn-active" href="#mode">モード</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=true'></script>
+  <script src="js/room.js"></script>
+</body>
+</html>

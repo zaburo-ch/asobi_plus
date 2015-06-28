@@ -1,0 +1,168 @@
+html, body {
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+.ui-page {
+  background-image: -moz-linear-gradient(top, #81a8cb, #ffffff);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #81a8cb),color-stop(1, #ffffff));
+}
+
+.padding10notop{
+  padding:0px 10px 10px 10px;
+}
+
+.padding20{
+  padding:20px;
+}
+
+.padding15{
+  padding:20px;
+}
+
+.padding10{
+  padding:10px;
+}
+
+.bg_white{
+  background-color: #ffffff;
+}
+
+.card_shadow{
+  position:relative;
+  margin-bottom: 20px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+
+.card_shadow:active{
+  position:relative;
+  margin: 1px 1px 19px 1px;
+    -webkit-box-shadow: 0 0 0 0 #000;
+       -moz-box-shadow: 0 0 0 0 #000;
+            box-shadow: 0 0 0 0 #000;
+}
+
+.control_btn{
+  float:left;
+  padding:5px;
+}
+
+.control_btn:active{
+  -webkit-transform : scale(0.85);
+  -ms-transform : scale(0.85);
+  transform : scale(0.85);
+}
+
+.invite_text{
+  color: #333333;
+  text-shadow: 1px 1px 1px #CCCCCC;
+  font-size:17.5px;
+  margin: 10px 0 6px 36px;
+  font-weight: normal;
+}
+
+.invite_img{
+  position: absolute;
+  top:50%;
+  margin-top: -15px;
+}
+
+.card_name{
+  color: #333333;
+  text-shadow: 1px 1px 1px #CCCCCC;
+  font-size:24.5px;
+}
+.card_id{
+  color: #888888;
+  text-shadow: 1px 1px 1px #DDDDDD;
+  font-size:14px
+}
+
+.marker_center {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.qrandbutton{
+  margin: 10% 0 10% 0;
+  text-align: center;
+}
+
+.howlink{
+  margin: 0 0 10% 0;
+  text-align: center;
+  color: #0578ff;
+}
+
+.open_control{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 55px;
+  margin: 8px 0 0 8px;
+  background-color: #FFFFFF;
+  border: solid 2px #BAB7B0;
+  padding: 0;
+}
+
+.close_control{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 30px;
+  margin: 8px 0 0 8px;
+  background-color: #FFFFFF;
+  border: solid 2px #BAB7B0;
+  padding: 0;
+  visibility: hidden;
+}
+
+.control_border{
+  margin: 12px 0 13px 0;
+  background-color: #BAB7B0;
+  height:30px;
+  width:2px;
+}
+
+.card_control_border{
+  float:left;
+  margin-top: 17px;
+  background-color: #BAB7B0;
+  height: 30px;
+  width:2px;
+}
+
+.card_control_img:active{
+  -webkit-transform : scale(0.85);
+  -ms-transform : scale(0.85);
+  transform : scale(0.85);
+}
+
+.wrap_map{
+  position: relative;
+}
+
+.qr_text{
+  padding: 20px 20px 0 20px;
+  color: #333333;
+  text-shadow: 1px 1px 1px #CCCCCC;
+  font-size:17.5px;
+}
+
+.alert_message{
+  padding:14px 10px 10px 10px;
+  color: #333333;
+  text-shadow: 1px 1px 1px #CCCCCC;
+  font-size:17.5px;
+}
+
+.howcard{
+  margin-top: 20px;
+}
