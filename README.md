@@ -15,12 +15,12 @@ key:'your key',
 
 ライセンス
 ----
-[MIT license](LICENSE.md).
-このソースコードには下記のライセンスを含みます。
-jQuery | Copyright (c) 2005, 2014 jQuery Foundation, Inc.  ([MIT](https://github.com/jquery/jquery/blob/master/LICENSE.txt))
-jQuery Mobile | Copyright (c) 2010, 2014 jQuery Foundation, Inc. ([MIT](https://github.com/jquery/jquery-mobile/blob/master/LICENSE.txt))
-PeerJS | Copyright (c) 2015 Michelle Bu and Eric Zhang ([MIT](https://github.com/peers/peerjs/blob/master/LICENSE))
-jquery-qrcode | Copyright (c) 2011 Jerome Etienne ([MIT](https://github.com/jeromeetienne/jquery-qrcode/blob/master/MIT-LICENSE.txt))
+[MIT license](LICENSE.md).  
+このソースコードには下記のライセンスを含みます。  
+jQuery | Copyright (c) 2005, 2014 jQuery Foundation, Inc.  ([MIT](https://github.com/jquery/jquery/blob/master/LICENSE.txt))  
+jQuery Mobile | Copyright (c) 2010, 2014 jQuery Foundation, Inc.  ([MIT](https://github.com/jquery/jquery-mobile/blob/master/LICENSE.txt))  
+PeerJS | Copyright (c) 2015 Michelle Bu and Eric Zhang ([MIT](https://github.com/peers/peerjs/blob/master/LICENSE))  
+jquery-qrcode | Copyright (c) 2011 Jerome Etienne ([MIT](https://github.com/jeromeetienne/jquery-qrcode/blob/master/MIT-LICENSE.txt))  
 
 作者
 ----
