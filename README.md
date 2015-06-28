@@ -13,5 +13,5 @@ key:'your key',
 
 License
 ----
-Open sourced under the MIT license.
+Open sourced under the [MIT license](LICENSE.md).
 
