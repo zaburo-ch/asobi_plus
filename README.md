@@ -28,7 +28,7 @@ key:'your key',
 
 ライセンス
 ----
-PeerJS is licensed under the [MIT license](LICENSE.md).  
+ASOBI+ is licensed under the [MIT license](LICENSE.md).  
 
 このソースコードには下記のライセンスの下配布されているコードを含みます。  
 jQuery | Copyright (c) 2005, 2014 jQuery Foundation, Inc.  ([MIT](https://github.com/jquery/jquery/blob/master/LICENSE.txt))  
