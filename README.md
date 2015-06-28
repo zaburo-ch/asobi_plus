@@ -15,7 +15,8 @@ key:'your key',
 
 ライセンス
 ----
-[MIT license](LICENSE.md).  
+PeerJS is licensed under the [MIT license](LICENSE.md).  
+
 このソースコードには下記のライセンスを含みます。  
 jQuery | Copyright (c) 2005, 2014 jQuery Foundation, Inc.  ([MIT](https://github.com/jquery/jquery/blob/master/LICENSE.txt))  
 jQuery Mobile | Copyright (c) 2010, 2014 jQuery Foundation, Inc.  ([MIT](https://github.com/jquery/jquery-mobile/blob/master/LICENSE.txt))  
